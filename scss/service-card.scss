@@ -1,0 +1,648 @@
+.appointment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  min-height: 100vh;
+}
+
+/* MAIN CONTAINER */
+.appointment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* LEFT SIDE: DESCRIPTION */
+.appointment-description {
+  text-align: left;
+  color: #333;
+}
+
+.appointment-description h2 {
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #0077cc;
+  font-weight: 700;
+}
+
+.appointment-description .highlight {
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+.appointment-description p {
+  color: #555;
+  margin: 15px 0 25px;
+  line-height: 1.6;
+  max-width: 480px;
+  font-size: 1rem;
+}
+
+.appointment-description button {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.appointment-description button:hover {
+  background: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* FORM CONTAINER */
+#multiForm {
+  flex: 1 1 420px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* FORM LABELS & INPUTS */
+#multiForm label {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Apply to all inputs EXCEPT checkboxes */
+#multiForm input:not([type="checkbox"]),
+#multiForm select {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Custom Checkbox Style */
+#multiForm input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #0077cc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+#multiForm input[type="checkbox"]:hover {
+  border-color: #00bcd4;
+  transform: scale(1.1);
+}
+
+/* Checked state */
+#multiForm input[type="checkbox"]:checked {
+  background-color: #0077cc;
+  border-color: #0077cc;
+}
+
+/* Custom checkbox base */
+#multiForm input[type="checkbox"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #0077cc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Checked state */
+#multiForm input[type="checkbox"]:checked {
+  background-color: #0077cc;
+  border-color: #0077cc;
+}
+
+/* Custom checkbox base */
+#multiForm input[type="checkbox"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #0077cc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Checked state */
+#multiForm input[type="checkbox"]:checked {
+  background-color: #0077cc;
+  border-color: #0077cc;
+}
+
+/* Bigger centered checkmark */
+#multiForm input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  transform: translate(-50%, -50%);
+}
+
+/* BUTTON GROUP */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.btn-group button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1;
+}
+
+.btn-group button:hover {
+  background: #005fa3;
+}
+
+/* DROPDOWN PROCEDURE */
+.dropdown-checkbox {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.dropdown-button {
+  padding: 14px 16px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.dropdown-button:hover {
+  border-color: #00bcd4;
+  box-shadow: 0 0 4px rgba(0, 188, 212, 0.3);
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top: 5px;
+  z-index: 10;
+  padding: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-list input[type="number"] {
+  margin-left: 10px;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .appointment-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .appointment-description {
+    text-align: center;
+  }
+
+  .appointment-description h2 {
+    font-size: 1.8rem;
+  }
+
+  .appointment-description p {
+    font-size: 0.95rem;
+    margin: 10px auto 20px;
+  }
+
+  #multiForm {
+    max-width: 480px;
+    width: 100%;
+  }
+}
+
+/* Phones (<= 600px) */
+@media (max-width: 600px) {
+  .appointment-section {
+    padding: 60px 15px;
+  }
+
+  .appointment-description h2 {
+    font-size: 1.5rem;
+  }
+
+  .appointment-description p {
+    font-size: 0.9rem;
+  }
+
+  #multiForm {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  #multiForm input,
+  #multiForm select {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    width: 100%;
+  }
+
+  .dropdown-button {
+    font-size: 14px;
+  }
+
+  .dropdown-list label {
+    font-size: 14px;
+  }
+}
+
+.appointment-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px 25px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  max-width: 480px;
+  margin: 30px auto;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.appointment-title {
+  color: #0077cc;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.appointment-info {
+  color: #333;
+  line-height: 1.6;
+}
+
+.appointment-info p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.appointment-info strong {
+  color: #0077cc;
+  font-weight: 600;
+}
+
+.appointment-info hr {
+  border: none;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 15px 0;
+}
+
+/* Button Section */
+.appointment-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, #ff4d4f, #ff6b6b);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: linear-gradient(135deg, #d9363e, #ff4d4f);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 77, 79, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .appointment-card {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .appointment-title {
+    font-size: 1.2rem;
+  }
+
+  .appointment-info p {
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .cancel-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.schedule-container {
+  display: flex;
+}
+
+/* 🌈 Appointment Section */
+.schedule-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main Container */
+.schedule-container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+  margin-top: 50px;
+  max-width: 1000px;
+}
+
+/* Appointment Card */
+.appointment-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 480px;
+  transition: all 0.3s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.appointment-title {
+  color: #0077cc;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.appointment-info p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.appointment-info strong {
+  color: #0077cc;
+}
+
+.appointment-info hr {
+  border: none;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 15px 0;
+}
+
+/* Cancel Button */
+.appointment-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, #ff4d4f, #ff6b6b);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: linear-gradient(135deg, #d9363e, #ff4d4f);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 77, 79, 0.3);
+}
+
+/* Countdown Card */
+.schedule-countdown {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 500px !important;
+  max-width: 480px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.schedule-countdown:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.countdown-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0077cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.countdown-sub {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.countdown-display {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.countdown-unit {
+  background: linear-gradient(145deg, #f0faff, #ffffff);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.05),
+    -3px -3px 8px rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 15px;
+  width: 70px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.countdown-unit:hover {
+  transform: scale(1.05);
+}
+
+.countdown-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1d3557;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  color: #457b9d;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.appointment-date {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #0077cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.release-info {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 12px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 992px) {
+  .schedule-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .appointment-card,
+  .schedule-countdown {
+    padding: 20px;
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .appointment-title,
+  .countdown-title {
+    font-size: 1.3rem;
+  }
+
+  .countdown-number {
+    font-size: 1.4rem;
+  }
+
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+
+  .appointment-info p {
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 14px;
+  }
+
+  .cancel-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
