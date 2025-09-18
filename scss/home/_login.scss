@@ -1,0 +1,128 @@
+.login-section {
+  .login-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 40px 200px auto 200px;
+    column-gap: 100px;
+  }
+  .login-text {
+    margin-top: 100px;
+    h1 {
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+    p {
+      max-width: 500px;
+      font-size: var(--font-size5);
+      font-weight: var(--fw1);
+    }
+  }
+  .login-form {
+    max-width: 500px;
+    p {
+      margin-bottom: 20px;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .btnmail {
+        padding: 16px 100px;
+        border-radius: 10px;
+        border: 2px solid black;
+        font-size: 14px;
+        text-align: center;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: var(--fw3);
+        cursor: pointer;
+        color: black;
+        width: 414px;
+      }
+      .remember {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 150px;
+      }
+    }
+    .btnicon {
+      display: flex;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      padding: 5px 10px;
+      padding: 20px;
+      min-width: 415px;
+      width: auto;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      gap: 10px;
+      font-size: 14px;
+
+      input {
+        border: none;
+        outline: none;
+        font-size: 14px;
+      }
+      input::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+  .bookbtn {
+    padding: 16px 100px;
+    background: var(--mid-blue);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: var(--font-size5);
+    font-weight: var(--fw3);
+    margin-bottom: 20px;
+    width: 414px;
+    display: inline-block;
+  }
+  .not {
+    display: flex;
+    gap: 10px;
+    a {
+      text-decoration: none;
+      font-weight: var(--fw3);
+      color: var(--mid-blue);
+    }
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #777;
+  font-size: 14px;
+  font-weight: 500;
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #3d3d3d;
+  }
+  &:not(:empty)::before {
+    margin-right: 0.75em;
+  }
+  &:not(:empty)::after {
+    margin-left: 0.75em;
+  }
+}
+
+@media (max-width: 992px) {
+  #menuList {
+    display: none;
+  }
+  .login-text {
+    display: none;
+  }
+}

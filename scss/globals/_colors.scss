@@ -1,0 +1,28 @@
+:root {
+  --dark-blue: #011632;
+  --mid-blue: #1376f8;
+  --sky-blue: #25b4f8;
+  --light-blue: #e6f6fe;
+  --white: #ffffff;
+  --body-color: #3c4959;
+  --success: #17bf28;
+  --warning: #ec942c;
+  --error: #e52323;
+
+  --linear1: linear-gradient(
+    to right,
+    rgba(37, 180, 248, 0) 0%,
+    rgba(37, 180, 248, 0.47) 51.04%,
+    rgb(37, 180, 248) 100%
+  );
+  --linear2: linear-gradient(
+    to left,
+    rgba(37, 180, 248, 0.3) 0%,
+    rgba(37, 180, 248, 0) 100%
+  );
+  --linear3: linear-gradient(
+    to top,
+    rgb(230, 246, 254) 0%,
+    rgba(230, 246, 254, 0) 100%
+  );
+}

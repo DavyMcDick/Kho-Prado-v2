@@ -1,0 +1,153 @@
+@media (max-width: 1800px) {
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    margin-top: 40px;
+    .hero-text {
+      h1 {
+        max-width: 400px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        font-size: var(--font-size2);
+      }
+      .description {
+        max-width: 350px;
+        line-height: 2;
+      }
+    }
+
+    .book-button {
+      margin-top: 20px;
+      height: 50px;
+      button {
+        margin: 0 20px 0 0;
+        padding: 0 15px;
+        font-size: var(--font-size7);
+        font-weight: var(--fw3);
+      }
+      .border {
+        .sky {
+          padding: 8px;
+        }
+      }
+    }
+  }
+  .hero-section .hero-image {
+    .doctor {
+      left: -40px;
+      top: -10px;
+    }
+
+    .circle-1 {
+      top: 10px;
+      left: 10px;
+    }
+
+    .circle-2 {
+      top: 35px;
+      left: 30px;
+    }
+
+    .shape {
+      top: 10px;
+      left: 0px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+  body {
+    margin: 0 20px;
+  }
+  header {
+    margin-top: 30px;
+    background: none;
+    height: 60px;
+    .logo-container {
+      margin: 0;
+
+      img {
+        height: 100px;
+      }
+    }
+  }
+  .hero-section {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+
+    .hero-text {
+      h1 {
+        max-width: 100%;
+        line-height: 1.1;
+        font-size: 52px;
+      }
+      .description {
+        max-width: 100%;
+        line-height: 2;
+        font-size: 18px;
+      }
+    }
+
+    .book-button {
+      display: flex;
+      margin-top: 20px;
+      button {
+        margin: 0 20px 0 0;
+        padding: 0 10px;
+      }
+      .border {
+        .sky {
+          padding: 9px;
+        }
+      }
+      div p {
+        line-height: 1.6;
+        color: var(--body-color);
+        margin-left: 20px;
+      }
+    }
+
+    .hero-image {
+      position: relative;
+
+      img {
+        position: absolute;
+        height: auto;
+      }
+
+      .doctor {
+        left: -10px;
+        top: 50px;
+      }
+
+      .circle-1 {
+        top: 30px;
+        left: 30px;
+      }
+
+      .circle-2 {
+        top: 50px;
+        left: 50px;
+      }
+
+      .shape {
+        top: 20px;
+        left: 15px;
+        z-index: 2;
+        height: auto;
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .choose-section {
+    .choose-cointainer {
+      width: 100vw;
+    }
+  }
+}
