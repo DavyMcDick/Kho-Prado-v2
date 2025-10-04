@@ -275,7 +275,9 @@
             We use only the best quality materials on the market in order to
             provide the best products to our patients.
           </p>
-          <button class="bookbtn">Learn More</button>
+          <div class="bookbtn book-button">
+            <button class="">Learn More</button>
+          </div>
         </div>
         <div class="learn-image">
           <img src="assets/learn.png" alt="" />
@@ -311,6 +313,23 @@
 
       hamburger.addEventListener("click", () => {
         menuList.classList.toggle("active");
+      });
+    </script>
+    <script>
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+          // Close other open items (optional)
+          faqItems.forEach((i) => {
+            if (i !== item) i.classList.remove("active");
+          });
+
+          // Toggle the clicked one
+          item.classList.toggle("active");
+        });
       });
     </script>
   </body>
