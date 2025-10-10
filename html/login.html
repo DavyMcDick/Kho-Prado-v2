@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="shortcut icon" href="../assets/fack.png" type="image/x-icon">
     <link rel="stylesheet" href="../dist/style.css" />
     <title>Kho Prado</title>
   </head>
@@ -20,38 +21,40 @@
             onclick="toggleMenu()"
           />
         </div>
-        <ul class="menu-container" id="menuList">
+        <ul class="menu-container login-menu" id="menuList">
           <li><a href="../index.html">Home</a></li>
           <li><a href="/html/service.html">Service</a></li>
           <li><a href="/html/blog.html">Blog</a></li>
           <li><a href="/html/about.html">About</a></li>
           <li><a href="/html/contact.html">Contact</a></li>
         </ul>
-        <div class="bookbtn">
-          <button style="margin-right: 0; background: none; color: black;">Login</button>
+        <div class="bookbtn book">
+          <button>Login</button>
           <button>Sign Up</button>
         </div>
       </nav>
     </header>
     <section class="login-section">
+      <div class="login-text">
+        <h1>
+          Welcome to <span class="highlight">Kho Prado </span>Dental Clinic
+        </h1>
+        <p>
+          Welcome to Kho Prado Dental Clinic Kho Prado Dental Clinic offers
+          expert care for a healthy, bright smile. Book your appointment
+          today!
+        </p>
+         <!-- <button class="bookbtn">Book Appointment</button> -->
+      </div>
       <div class="login-container">
-        <div class="login-text">
-          <h1>
-            Welcome to <span class="highlight">Kho Prado </span>Dental Clinic
-          </h1>
-          <p>
-            Welcome to Kho Prado Dental Clinic Kho Prado Dental Clinic offers
-            expert care for a healthy, bright smile. Book your appointment
-            today!
-          </p>
-           <!-- <button class="bookbtn">Book Appointment</button> -->
-        </div>
         <div class="login-form">
+          <div class="login-des">
           <h2><span>Welcome Back</span></h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
             obcaecati saepe maxime?
           </p>
+          </div>
           <form action="" class="form">
             <button class="btnmail ">
               <img src="../assets/Google.svg" alt="" />Log in with Google
@@ -65,7 +68,7 @@
             <img src="../assets/lock.svg" alt="">
             <input  type="password" placeholder="Password" ></input>
             </div>
-            <div class="remember">
+            <div class="remember login">
                 <label for="">
                 <input type="checkbox" name="" id="">Remember Me?
                 </label>         

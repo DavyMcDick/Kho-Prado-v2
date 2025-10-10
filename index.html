@@ -11,7 +11,7 @@
     <header>
       <nav class="nav-main">
         <div class="logo-container">
-          <img src="assets/kho_prado1.png" alt="Logo" height="110" />
+          <img src="assets/kho_prado1.png" alt="Logo" height="80" />
         </div>
         <ul class="menu-container" id="menuList">
           <li><a href="#home">Home</a></li>
@@ -20,9 +20,9 @@
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="bookbtn">
-          <button>Book Now</button>
-        </div>
+        <a href="./html/login.html">
+          <button class="bookbtn book">Login</button>
+        </a>
         <div class="hamburger" id="hamburger">
           <img
             src="assets/hamburger.svg"
@@ -103,20 +103,6 @@
         </div>
       </div>
     </section>
-    <script>
-      const container = document.querySelector(".treatment-container");
-      const cards = document.querySelectorAll(".treatment-card");
-
-      let index = 0;
-
-      setInterval(() => {
-        index = (index + 1) % cards.length; // go to next card, loop back
-        container.scrollTo({
-          left: cards[index].offsetLeft,
-          behavior: "smooth",
-        });
-      }, 3000); // 2 seconds]
-    </script>
 
     <section class="welcome-section">
       <div class="welcome-container">
@@ -187,9 +173,9 @@
             provide the best products to our patients, So don't worry about
             anything and book yourself.
           </p>
-          <div class="bookbtn">
+          <a href="/html/login.html" class="bookbtn book">
             <button>Book Appointment</button>
-          </div>
+          </a>
         </div>
         <div class="choose-image">
           <img src="assets/patient2.svg" alt="" />
@@ -204,7 +190,7 @@
           Wait to Meet You.
         </h2>
         <p>
-          We use only thebest quality materials on the market in order to
+          We use only the best quality materials on the market in order to
           provide the best products to our patients.
         </p>
       </div>
@@ -275,8 +261,8 @@
             We use only the best quality materials on the market in order to
             provide the best products to our patients.
           </p>
-          <div class="bookbtn book-button">
-            <button class="">Learn More</button>
+          <div>
+            <button class="but">Learn More</button>
           </div>
         </div>
         <div class="learn-image">
@@ -332,5 +318,20 @@
         });
       });
     </script>
+    <!-- <script>
+      const container = document.querySelector(".treatment-container");
+      const cards = document.querySelectorAll(".treatment-card");
+
+      let index = 0;
+
+      setInterval(() => {
+        index = (index + 1) % cards.length; // go to next card, loop back
+        container.scrollTo({
+          left: cards[index].offsetLeft,
+          behavior: "smooth",
+        });
+      }, 3000); // 2 seconds]
+    </script> -->
+    <script src="/js/hamburger.js"></script>
   </body>
 </html>

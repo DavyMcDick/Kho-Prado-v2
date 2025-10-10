@@ -1,0 +1,438 @@
+@media (min-width: 993px) {
+  //desktop navbar
+  .hamburger img {
+    display: none;
+  }
+  .bookbtn {
+    display: block !important;
+    margin-right: 50px;
+    text-decoration: none;
+    a {
+    }
+  }
+  .nav-main {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    font-size: 18px;
+  }
+  header {
+    height: 120px;
+    background: var(--light-blue);
+    margin-top: 40px;
+    border-radius: 10px;
+  }
+  .logo-container img {
+    height: 110px;
+    margin-left: 20px;
+  }
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+  header .logo-container {
+    flex: 1;
+  }
+
+  header .menu-container {
+    all: unset; /* ← optional: removes inherited styles from mobile */
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--ffamily2);
+    font-size: var(--font-size5);
+    font-weight: var(--fw3);
+    color: var(--dark-blue);
+    list-style: none;
+  }
+
+  header .menu-container ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .hero-section {
+    grid-template-columns: 1.5fr 1fr;
+    .hero-text {
+      margin-left: 50px;
+      h1 {
+        font-size: 58px;
+        margin: 0;
+        width: 100%;
+      }
+      p {
+        max-width: 500px;
+        line-height: 1.8;
+        font-size: 18px;
+      }
+    }
+  }
+  .treatment-section {
+    .treatment-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .welcome-section {
+    .welcome-container {
+      margin: 0 130px;
+
+      .welcome-text {
+        max-width: 500px;
+        h2 {
+          font-size: 42px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      .welcome-image {
+        margin-left: 100px;
+        img {
+          box-shadow: 30px 30px var(--sky-blue);
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  .choose-section {
+    margin: 100px 0;
+    .choose-container {
+      background: var(--light-blue);
+      border-radius: 10px;
+      padding: 55px 108px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .choose-image {
+        margin-left: 10px;
+      }
+      .choose-test {
+        max-width: 520px;
+        margin-left: 50px;
+        p {
+          font-size: var(--font-size5);
+          font-weight: var(--fw1);
+          max-width: 300;
+          line-height: 2;
+          color: var(--body-color);
+          align-items: center;
+          margin-bottom: 20px;
+        }
+      }
+      .choose-description div {
+        display: flex;
+        gap: 10px;
+        p {
+          margin: 0;
+        }
+      }
+      .bookbtn {
+        margin-top: 20px;
+      }
+    }
+  }
+  .choose-section2 {
+    margin: 100px 0;
+    .choose2-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .choose-test {
+        max-width: 700px;
+        margin: 30px 0 0 150px;
+        p {
+          font-size: var(--font-size5);
+          font-weight: var(--fw1);
+          max-width: 300;
+          line-height: 2;
+          color: var(--body-color);
+          align-items: center;
+          margin-bottom: 20px;
+        }
+      }
+      .choose-image {
+        margin-left: 100px;
+        img {
+          box-shadow: 30px 30px var(--sky-blue);
+          border-radius: 10px;
+        }
+      }
+      .choose-description {
+        display: flex;
+        gap: 10px;
+        p {
+          margin: 0;
+        }
+      }
+      .bookbtn {
+        margin-top: 20px;
+      }
+    }
+  }
+  .learn-section {
+    max-width: 100%;
+    width: auto;
+    background: var(--dark-blue);
+    margin: 200px auto;
+    padding: 60px 45px;
+    border-radius: 10px;
+    .learn-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      .learn-text {
+        max-width: 900px;
+        margin-left: 20px;
+      }
+      h2 {
+        max-width: 700px;
+        color: var(--white);
+      }
+      p {
+        font-size: var(--font-size5);
+        font-weight: var(--fw1);
+        max-width: 500px;
+        line-height: 2;
+        color: var(--body-color);
+      }
+      .bookbtn {
+        margin: 20px 0;
+        padding: 15px 30px 15px 30px;
+        font-size: var(--font-size6);
+        font-weight: var(--fw4);
+        color: var(--white);
+        background-color: var(--mid-blue);
+        border: none;
+        border-radius: 10px;
+        margin-right: 60px;
+      }
+    }
+  }
+  .faq-section {
+    .faq-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .footer-section {
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      .footer-menu {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        li {
+          margin: 0;
+        }
+      }
+    }
+    .footer-icon {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 0;
+      .icons {
+        display: flex;
+        gap: 30px;
+      }
+    }
+    hr {
+      height: 2px;
+      border: 1px solid black;
+    }
+  }
+
+  .faq {
+    max-width: 700px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    background: #1e90ff;
+    padding: 0 20px;
+    color: var(--body-color);
+  }
+
+  .faq-answer p {
+    margin: 15px 0;
+    color: #fff;
+  }
+
+  .faq-item.active {
+    background: #1e90ff;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .faq-item.active .faq-question {
+    background: #1e90ff;
+    color: white;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 15px 20px;
+  }
+
+  .faq-item.active .faq-answer p {
+    color: white;
+  }
+
+  .icon {
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+
+  .faq-item.active .icon {
+    transform: rotate(45deg);
+  }
+  .service-section {
+    .service-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        max-width: 600px;
+        text-align: center;
+      }
+    }
+  }
+
+  .treatment2-section {
+    .treatment2-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      .treatment-card {
+      }
+    }
+  }
+  .appointment-section {
+    .appointment-container {
+      display: grid;
+      grid-template-columns: 1.3fr 1.5fr;
+      align-items: center;
+      margin: 0 50px;
+      .appointment-description {
+        max-width: 500px;
+        text-align: center;
+        margin: 0 50px;
+      }
+      .appointment-form {
+        margin: 50px;
+      }
+      button {
+      }
+    }
+  }
+  .welcome-section {
+    .welcome-container {
+      .welcome-text {
+        margin: 0 50px;
+      }
+    }
+  }
+  .learn-section {
+    .learn-container {
+      margin: 0 50px;
+      .learn-text {
+      }
+    }
+  }
+  .about-section {
+    h1 {
+      margin: 20px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .about-text {
+      display: flex;
+      width: 50%;
+      margin-left: 50px;
+      .about-description {
+        h2 {
+          margin: 20px 0;
+        }
+      }
+      .doc-image {
+        img {
+          max-inline-size: none;
+          width: 1000%;
+          margin-left: 30px;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .specialist-section {
+    .specialist-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .doc-description {
+      display: flex;
+      .doc-image img {
+        margin: 50px;
+        width: 100%;
+      }
+      .p {
+        margin: 50px 0 0 200px;
+        max-width: 80%;
+      }
+    }
+  }
+  .latest-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      max-width: 500px;
+    }
+    .latest-container {
+      display: flex;
+      .latest-image {
+        width: 40%;
+        height: auto;
+      }
+      .latest-descrip p {
+        color: var(--body-color);
+      }
+    }
+  }
+}

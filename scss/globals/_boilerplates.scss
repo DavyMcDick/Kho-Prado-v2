@@ -12,3 +12,49 @@ html {
 body {
   margin: 0 20px;
 }
+
+.book-button {
+  display: flex;
+  margin-top: 40px;
+  button {
+    margin: 0 50px 0 0;
+    padding: 15px 30px 15px 30px;
+    font-size: var(--font-size6);
+    font-weight: var(--fw4);
+    color: var(--white);
+    background-color: var(--mid-blue);
+    border: none;
+    border-radius: 10px;
+  }
+  .border {
+    border: 2px solid var(--mid-blue);
+    border-radius: 10px;
+
+    .sky {
+      background-color: var(--light-blue);
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+  div p {
+    line-height: 1.6;
+    color: var(--body-color);
+    margin-left: 20px;
+  }
+}
+
+button {
+  padding: 15px 30px 15px 30px;
+  font-size: var(--font-size6);
+  font-weight: var(--fw4);
+  color: var(--white);
+  background-color: var(--mid-blue);
+  border: none;
+  border-radius: 10px;
+}
+
+@media (min-width: 993px) {
+  p {
+    font-size: 18px;
+  }
+}
